@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.bumptech.glide.Glide;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.navigation.NavigationBarView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -36,7 +37,7 @@ public class AsistenteHomeActivity extends AppCompatActivity {
     ImageView ivPfp;
     TextView tvSaludo;
     TextView tvSolicitudesRespondidas;
-    ImageView ivFotitoAsist;
+    ShapeableImageView ivFotitoAsist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

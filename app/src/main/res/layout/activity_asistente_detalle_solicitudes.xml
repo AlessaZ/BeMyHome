@@ -12,8 +12,10 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
 
         <LinearLayout
@@ -21,6 +23,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingHorizontal="16dp">
+
             <LinearLayout
                 android:id="@+id/llAsistenteDetalleSolicitudesTitle"
                 android:layout_width="match_parent"
@@ -52,9 +55,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
                 android:layout_marginBottom="15dp"
-                android:layout_marginTop="20dp">
+                android:orientation="horizontal">
 
                 <ImageView
                     android:id="@+id/ivAsistenteDetalleSolicitudesImageAdopt"
@@ -85,6 +88,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
                         android:text="72188594" />
+
                     <TextView
                         android:id="@+id/tvAsistenteDetalleSolicitudesGeFechaReserva"
                         style="@style/BlackMedium16"
@@ -106,8 +110,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
                 android:paddingVertical="10dp">
 
                 <ImageView
@@ -134,8 +138,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
-                            android:textSize="15dp"
-                            android:text="Hembra," />
+                            android:text="Hembra,"
+                            android:textSize="15dp" />
 
                         <TextView
                             android:id="@+id/tvAsistenteDetalleSolicitudesAnios"
@@ -143,8 +147,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="4dp"
-                            android:textSize="15dp"
-                            android:text="3 meses" />
+                            android:text="3 meses"
+                            android:textSize="15dp" />
                     </LinearLayout>
 
                     <TextView
@@ -221,11 +225,11 @@
                     style="@style/BlackSemiBoldSubtitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textSize="14dp"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="8dp"
                     android:gravity="center_horizontal"
-                    android:text="Lugar de recojo" />
+                    android:text="Lugar de recojo"
+                    android:textSize="14dp" />
 
             </LinearLayout>
 
@@ -289,16 +293,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
                 <TextView
                     style="@style/BlackMediumSubtitle"
-                    android:textSize="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="10dp"
-                    android:text="¿Es propio o alquilado?" />
+                    android:layout_marginBottom="8dp"
+                    android:text="¿Es propio o alquilado?"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tvAsistenteDetalleSolicitudesAlquiladoOno"
@@ -311,17 +316,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
 
                 <TextView
                     style="@style/BlackMediumSubtitle"
-                    android:textSize="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="10dp"
-                    android:text="¿Tiene jardín o patio?" />
+                    android:layout_marginBottom="8dp"
+                    android:text="¿Tiene jardín o patio?"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tvAsistenteDetalleSolicitudesPatioOno"
@@ -335,16 +340,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
                 <TextView
                     style="@style/BlackMediumSubtitle"
-                    android:textSize="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="10dp"
-                    android:text="Cantidad de personas en casa:" />
+                    android:layout_marginBottom="8dp"
+                    android:text="Cantidad de personas en casa:"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tVAsistenteDetalleSolicitudesCantidadPersonas"
@@ -357,68 +363,71 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
                 <TextView
                     style="@style/BlackMediumSubtitle"
-                    android:textSize="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="10dp"
-                    android:text="¿Alguien es alérgico a los animales?" />
+                    android:layout_marginBottom="8dp"
+                    android:text="¿Alguien es alérgico a los animales?"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tvAsistenteDetalleSolicitudesAlergico"
                     style="@style/PinkMedium16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"/>
+                    android:layout_marginBottom="8dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/tvAsistenteDetalleSolicitudesCantidadMascotas"
                     style="@style/BlackMediumSubtitle"
-                    android:textSize="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="10dp"
-                    android:text="Cantidad de mascotas en casa:" />
+                    android:layout_marginBottom="8dp"
+                    android:text="Cantidad de mascotas en casa:"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tVAsistenteDetalleSolicitudesCantidadMascotas"
                     style="@style/PinkMedium16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginBottom="16dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
                 <TextView
                     style="@style/BlackMediumSubtitle"
-                    android:textSize="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="10dp"
-                    android:text="¿Tienen sus vacunas al día?" />
+                    android:layout_marginBottom="8dp"
+                    android:text="¿Tienen sus vacunas al día?"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tvAsistenteDetalleSolicitudesVacunas"
                     style="@style/PinkMedium16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginBottom="16dp" />
             </LinearLayout>
 
             <TextView
@@ -432,73 +441,75 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/tvAsistenteDetalleSolicitudesDedicacion"
                     style="@style/BlackMediumSubtitle"
-                    android:textSize="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="10dp"
-                    android:text="Tiempo para dedicar a la mascota:" />
+                    android:layout_marginBottom="8dp"
+                    android:text="Tiempo para dedicar a la mascota:"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tVAsistenteDetalleSolicitudesDedicacion"
                     style="@style/PinkMedium16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginBottom="16dp" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="12dp">
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/tvAsistenteDetalleSolicitudesPaseo"
                     style="@style/BlackMediumSubtitle"
-                    android:textSize="16dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
                     android:layout_marginEnd="10dp"
-                    android:text="Tiempo para pasear a la mascota:" />
+                    android:layout_marginBottom="8dp"
+                    android:text="Tiempo para pasear a la mascota:"
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tVAsistenteDetalleSolicitudesPaseo"
                     style="@style/PinkMedium16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="16dp"/>
+                    android:layout_marginBottom="16dp" />
             </LinearLayout>
 
             <TextView
                 style="@style/BlackMediumSubtitle"
-                android:textSize="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="10dp"
-                android:text="¿Dónde pasaría la mayor parte del tiempo?" />
+                android:layout_marginBottom="8dp"
+                android:text="¿Dónde pasaría la mayor parte del tiempo?"
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/tvAsistenteDetalleSolicitudesLugar"
                 style="@style/PinkMedium16"
-                android:textAlignment="center"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"/>
+                android:layout_marginBottom="8dp"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tvAsistenteDetalleSolicitudesDNI"
                 style="@style/PinkSemiBoldSubtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginBottom="8dp"
                 android:text="DNI del adoptante" />
 
             <androidx.recyclerview.widget.RecyclerView
@@ -549,9 +560,9 @@
                 android:id="@+id/llAsistenteDetalleSolicitudesButtons"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:layout_gravity="center">
+                android:orientation="horizontal">
 
                 <Button
                     android:id="@+id/btnAsistenteDetalleSolicitudesAceptarSoli"
@@ -581,6 +592,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:orientation="vertical">
+
                 <TextView
                     android:id="@+id/tvAsistenteDetalleSolicitudesResponseTittle"
                     style="@style/PinkSemiBoldSubtitle"
@@ -593,9 +605,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
                     android:orientation="horizontal"
                     android:paddingHorizontal="24dp"
-                    android:layout_marginBottom="10dp"
                     android:paddingVertical="16dp">
 
                     <ImageView

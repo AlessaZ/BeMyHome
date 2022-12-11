@@ -65,6 +65,13 @@ public class PetsCardAdapter extends FirestorePagingAdapter<Pet, PetsCardAdapter
             case "Otros":
                 holder.ivCategoria.setImageResource(R.drawable.others);
         }
+        if(model.getAdoptado().equals("")){
+            holder.tvDetalle.setVisibility(View.VISIBLE);
+            holder.tvAdoptado.setVisibility(View.GONE);
+        }else{
+            holder.tvDetalle.setVisibility(View.GONE);
+            holder.tvAdoptado.setVisibility(View.VISIBLE);
+        }
         holder.pet = model;
         holder.ivPetFoto.setScaleType(ImageView.ScaleType.CENTER_CROP);
         Glide.with(holder.itemView.getContext()).load(model.getFotosUrl().get(0))
@@ -93,8 +100,8 @@ public class PetsCardAdapter extends FirestorePagingAdapter<Pet, PetsCardAdapter
             tvSexo = itemView.findViewById(R.id.tvCardPetsSexo);
             tvDetalle = itemView.findViewById(R.id.tvCardPetsDetalles);
             tvAdoptado = itemView.findViewById(R.id.tvCardPetsAdoptado);
-            if(!pet.getAdoptado().equals("adoptado")){
-                itemView.setOnClickListener(view -> {
+            itemView.setOnClickListener(view -> {
+                if(pet.getAdoptado().equals("")){
                     Intent petIntent = new Intent(itemView.getContext(), nextActivity);
                     petIntent.putExtra("mascota", pet);
                     if (nextActivity == AsistenteDetalleMascotasActivity.class) {
@@ -102,12 +109,8 @@ public class PetsCardAdapter extends FirestorePagingAdapter<Pet, PetsCardAdapter
                         return;
                     }
                     itemView.getContext().startActivity(petIntent);
-                });
-            }else{
-                tvDetalle.setVisibility(View.GONE);
-                tvAdoptado.setVisibility(View.VISIBLE);
-            }
-
+                }
+            });
         }
     }
 

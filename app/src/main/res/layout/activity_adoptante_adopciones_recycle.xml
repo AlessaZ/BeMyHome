@@ -67,7 +67,7 @@
             android:src="@drawable/empty_search"/>
         <TextView
             android:id="@+id/tvAdoptanteAdopcionesRecycleTxtEmpty"
-            style="@style/WhiteSemiBoldSubtitle"
+            style="@style/PinkSemiBoldSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="center"

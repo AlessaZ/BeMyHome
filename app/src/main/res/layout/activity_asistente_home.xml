@@ -129,12 +129,14 @@
 
                 </LinearLayout>
 
-                <ImageView
+                <com.google.android.material.imageview.ShapeableImageView
                     android:id="@+id/ivAsistenteHomeFotitoAsist"
+                    android:scaleType="fitCenter"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginVertical="15dp"
-                    android:src="@drawable/avatar_placeholder"></ImageView>
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/avatar_placeholder">
+                </com.google.android.material.imageview.ShapeableImageView>
             </LinearLayout>
 
         </RelativeLayout>

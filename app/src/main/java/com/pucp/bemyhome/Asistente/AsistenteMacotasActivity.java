@@ -106,7 +106,7 @@ public class AsistenteMacotasActivity extends AppCompatActivity {
                 .setQuery(petsQuery, config, petsSnapshotParser)
                 .build();
         petsCardAdapter = new PetsCardAdapter(options, AsistenteDetalleMascotasActivity.class);
-        petsCardAdapter.setCrudResultLauncher(createActivityResultLauncher);
+        petsCardAdapter.setCrudResultLauncher(refreshLauncher);
 
         GridLayoutManager layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
@@ -206,7 +206,7 @@ public class AsistenteMacotasActivity extends AppCompatActivity {
 
     public void goToCreatePet(View view){
         Intent createIntent = new Intent(AsistenteMacotasActivity.this,AsistenteNewMascotaFormActivity.class);
-        createActivityResultLauncher.launch(createIntent);
+        refreshLauncher.launch(createIntent);
     }
 
 
@@ -223,7 +223,7 @@ public class AsistenteMacotasActivity extends AppCompatActivity {
         }
     };
 
-    ActivityResultLauncher<Intent> createActivityResultLauncher = registerForActivityResult(
+    ActivityResultLauncher<Intent> refreshLauncher = registerForActivityResult(
             new ActivityResultContracts.StartActivityForResult(),
             new ActivityResultCallback<ActivityResult>() {
                 @Override

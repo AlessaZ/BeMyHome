@@ -29,6 +29,7 @@ import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.maps.MapView;
 import com.mapbox.mapboxsdk.maps.MapboxMap;
 import com.mapbox.mapboxsdk.maps.OnMapReadyCallback;
+import com.mapbox.mapboxsdk.maps.Style;
 import com.mapbox.mapboxsdk.plugins.annotation.FillManager;
 import com.mapbox.mapboxsdk.plugins.annotation.SymbolManager;
 import com.pucp.bemyhome.Entity.Pet;
@@ -155,6 +156,14 @@ public class AsistenteAcceptSoliActivity extends AppCompatActivity {
                 Toast.makeText(AsistenteAcceptSoliActivity.this, "Debes seleccionar un lugar de recojo", Toast.LENGTH_LONG).show();
             }
         });
+
+        mapView.getMapAsync(mapboxMap -> mapboxMap.setStyle(Style.OUTDOORS, style -> {
+            this.mapboxMapG = mapboxMap;
+            fillManager = new FillManager(mapView, mapboxMap,style,null);
+            // Use options to color it red.
+            symbolManager = new SymbolManager(mapView, mapboxMap, style, null);
+        }));
+
 
         listMarkers.add(vet1);
         listMarkers.add(vet2);

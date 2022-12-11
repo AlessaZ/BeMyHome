@@ -357,6 +357,7 @@ public class AsistenteNewMascotaFormActivity extends AppCompatActivity {
         FirebaseFirestore.getInstance().collection("pets").add(pet).addOnSuccessListener(unused -> {
             ocultarCargando();
             Toast.makeText(AsistenteNewMascotaFormActivity.this, "Se añadió la mascota "+pet.getNombre(), Toast.LENGTH_SHORT).show();
+            setResult(RESULT_OK);
             finish();
         }).addOnFailureListener(e->{
             ocultarCargando();

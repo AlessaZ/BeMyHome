@@ -66,7 +66,7 @@ public class AdoptanteAdopcionesRecycleActivity extends AppCompatActivity {
                 tvTitle.setText("Historial de solicitudes");
                 tvTxt.setText("Encuentra aquí todas las solicitudes que has realizado");
                 tvEmpty.setText("Aún no has realizado ninguna solicitud de adopción");
-                solicitudQuery = FirebaseFirestore.getInstance().collection("solicitudes");
+                solicitudQuery = FirebaseFirestore.getInstance().collection("solicitudes").whereEqualTo("adoptanteUser.uid",user.getUid());
                 break;
             case "enProceso":
                 tvTitle.setText("Pendientes de aprobación");
@@ -78,7 +78,7 @@ public class AdoptanteAdopcionesRecycleActivity extends AppCompatActivity {
                 tvTitle.setText("Solicitudes finalizadas");
                 tvTxt.setText("Encuentra aquí todas las solicitudes que hayan sido respondidas");
                 tvEmpty.setText("Aún no hay solicitudes que hayan sido respondidas");
-                solicitudQuery = FirebaseFirestore.getInstance().collection("solicitudes").whereEqualTo("adoptanteUser.uid",user.getUid()).whereNotEqualTo("estado","Pendiente de aprobación");
+                solicitudQuery = FirebaseFirestore.getInstance().collection("solicitudes").whereEqualTo("adoptanteUser.uid",user.getUid()).whereEqualTo("horaRespuesta",true);
                 break;
         }
 
