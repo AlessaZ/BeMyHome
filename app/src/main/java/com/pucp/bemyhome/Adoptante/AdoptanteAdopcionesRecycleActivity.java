@@ -78,7 +78,7 @@ public class AdoptanteAdopcionesRecycleActivity extends AppCompatActivity {
                 tvTitle.setText("Solicitudes finalizadas");
                 tvTxt.setText("Encuentra aquí todas las solicitudes que hayan sido respondidas");
                 tvEmpty.setText("Aún no hay solicitudes que hayan sido respondidas");
-                solicitudQuery = FirebaseFirestore.getInstance().collection("solicitudes").whereEqualTo("adoptanteUser.uid",user.getUid()).whereEqualTo("horaRespuesta",true);
+                solicitudQuery = FirebaseFirestore.getInstance().collection("solicitudes").whereEqualTo("adoptanteUser.uid",user.getUid()).whereEqualTo("asistUser.uid",null);
                 break;
         }
 

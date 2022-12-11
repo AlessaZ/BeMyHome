@@ -1,25 +1,34 @@
 package com.pucp.bemyhome;
 
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.NotificationCompat;
+import androidx.core.app.NotificationManagerCompat;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.gson.Gson;
 import com.pucp.bemyhome.Admin.AdminHomeActivity;
+import com.pucp.bemyhome.Adoptante.AdoptanteAdopcionesRecycleActivity;
 import com.pucp.bemyhome.Adoptante.AdoptanteHomeActivity;
 import com.pucp.bemyhome.Asistente.AsistenteHomeActivity;
 import com.pucp.bemyhome.Entity.User;
@@ -29,6 +38,7 @@ import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
 
+    final String CHANNEL_ID = "CocoChannel";
     CollectionReference usersRef;
     SharedPreferences sharedPreferences;
 
@@ -40,6 +50,8 @@ public class MainActivity extends AppCompatActivity {
                 WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
         setContentView(R.layout.activity_main);
         usersRef = FirebaseFirestore.getInstance().collection("users");
+
+        createNotificationChannel();
     }
 
     @Override
@@ -74,19 +86,17 @@ public class MainActivity extends AppCompatActivity {
                 editor.apply();
                 switch (Objects.requireNonNull(documentSnapshot.getString("permisos"))){
                     case "Adoptante":
-                        Toast.makeText(MainActivity.this, "Hola Adoptante", Toast.LENGTH_SHORT).show();
+                        addListener();
                         intentPermisos  = new Intent(MainActivity.this, AdoptanteHomeActivity.class);
                         startActivity(intentPermisos);
                         finish();
                         break;
                     case "Admin":
-                        Toast.makeText(MainActivity.this, "Hola Admin", Toast.LENGTH_SHORT).show();
                         intentPermisos  = new Intent(MainActivity.this, AdminHomeActivity.class);
                         startActivity(intentPermisos);
                         finish();
                         break;
                     case "Asistente":
-                        Toast.makeText(MainActivity.this, "Hola Asistente", Toast.LENGTH_SHORT).show();
                         intentPermisos  = new Intent(MainActivity.this, AsistenteHomeActivity.class);
                         startActivity(intentPermisos);
                         finish();
@@ -101,7 +111,75 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intentAnonymus);
                 finish();
             }
-        });;
+        });
     }
+
+    public void addListener() {
+        FirebaseFirestore.getInstance().collection("solicitudes")
+                .whereEqualTo("adoptanteUser.uid", FirebaseAuth.getInstance().getUid())
+                .whereGreaterThanOrEqualTo("horaRespuesta", Timestamp.now())
+                .addSnapshotListener((snapshots, e) -> {
+                    if (e != null) {
+                        if (e.getCode() == FirebaseFirestoreException.Code.PERMISSION_DENIED) {
+                            return;
+                        }
+                        Log.w("msg", "listen:error", e);
+                        return;
+                    }
+                    int i = 1;
+                    for (DocumentChange dc : snapshots.getDocumentChanges()) {
+                        snapshots.getDocuments();
+                        if (dc.getType() == DocumentChange.Type.ADDED){
+                            Log.d("msg", dc.getDocument().toString());
+                            String nombre = dc.getDocument().getString("pets.nombre");
+                            String estado = dc.getDocument().getString("estado");
+                            if (estado == null || nombre == null) return;
+                            String typeSolici;
+                            String titulo;
+                            String msg;
+                            if (estado.equals("Solicitud rechazada")) {
+                                titulo = "Tu solicitud ha sido rechazada";
+                                msg = "No hemos podido aprobar tu solicitud de adopción";
+                                typeSolici = "historial";
+                                notificarSolicitud(typeSolici, titulo, msg, i);
+                            } else if (estado.equals("Solicitud aceptada")) {
+                                titulo = "Tu solicitud ha sido aprobada";
+                                msg = "Se aprobó tu solicitud de adopción para " + nombre ;
+                                typeSolici = "finalizadas";
+                                notificarSolicitud(typeSolici, titulo, msg, i);
+                            }
+                        }
+                        i++;
+                    }
+
+                });
+    }
+
+    public void createNotificationChannel(){
+        NotificationChannel channelDefault = new NotificationChannel(CHANNEL_ID, "Actualizaciones de solicitud", NotificationManager.IMPORTANCE_HIGH);
+        channelDefault.enableVibration(true);
+        NotificationManager notificationManager = getSystemService(NotificationManager.class);
+        notificationManager.createNotificationChannel(channelDefault);
+    }
+
+    public void notificarSolicitud(String solicitudesType, String titulo, String mensajeStr, int id){
+        Intent intent = new Intent(this, AdoptanteAdopcionesRecycleActivity.class);
+        intent.putExtra("typeSolicitudes", solicitudesType);
+        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(MainActivity.this, CHANNEL_ID)
+                .setSmallIcon(R.drawable.logo)
+                .setOnlyAlertOnce(true)
+                .setContentTitle(titulo)
+                .setContentText(mensajeStr)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true);
+
+        NotificationManagerCompat notificationManagerCompat = NotificationManagerCompat.from(this);
+        notificationManagerCompat.notify(id, builder.build());
+    }
+
 
 }

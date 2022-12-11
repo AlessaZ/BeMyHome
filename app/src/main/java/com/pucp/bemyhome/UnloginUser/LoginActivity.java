@@ -217,7 +217,9 @@ public class LoginActivity extends AppCompatActivity {
                         if (dc.getType() == DocumentChange.Type.ADDED){
                             Log.d("msg", dc.getDocument().toString());
                             String nombre = dc.getDocument().getString("pets");
+                            Log.wtf("msg",nombre);
                             String estado = dc.getDocument().getString("estado");
+                            Log.wtf("msg",estado);
                             if (estado == null || nombre == null) return;
                             String typeSolici;
                             String titulo;
@@ -241,9 +243,9 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-    public void notificarSolicitud(String reservasType, String titulo, String mensajeStr, int id){
+    public void notificarSolicitud(String solicitudesType, String titulo, String mensajeStr, int id){
         Intent intent = new Intent(this, AdoptanteAdopcionesRecycleActivity.class);
-        intent.putExtra("typeSolicitudes", reservasType);
+        intent.putExtra("typeSolicitudes", solicitudesType);
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
 

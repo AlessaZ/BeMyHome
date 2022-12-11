@@ -56,7 +56,7 @@ public class AsistenteHomeActivity extends AppCompatActivity {
         FirebaseUser userG = FirebaseAuth.getInstance().getCurrentUser();
         tvNombre.setText(user.getNombre());
         Glide.with(this).load(user.getAvatarUrl()).into(ivPfp);
-        Glide.with(this).load(user.getAvatarUrl()).into(ivFotitoAsist);
+        Glide.with(this).load(user.getAvatarUrl()).placeholder(R.drawable.avatar_placeholder).into(ivFotitoAsist);
         FirebaseFirestore.getInstance().collection("solicitudes").whereEqualTo("asistUser.uid", userG.getUid()).count().get(AggregateSource.SERVER).addOnSuccessListener(new OnSuccessListener<AggregateQuerySnapshot>() {
             @Override
             public void onSuccess(AggregateQuerySnapshot aggregateQuerySnapshot) {
