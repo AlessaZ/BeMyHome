@@ -36,6 +36,7 @@ public class AsistenteHomeActivity extends AppCompatActivity {
     ImageView ivPfp;
     TextView tvSaludo;
     TextView tvSolicitudesRespondidas;
+    ImageView ivFotitoAsist;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class AsistenteHomeActivity extends AppCompatActivity {
         ivPfp = findViewById(R.id.ivAsistenteHomePfp);
         tvSaludo = findViewById(R.id.tvAsistenteHomeSaludo);
         tvSolicitudesRespondidas = findViewById(R.id.tvAsistenteHomeCantReservas);
+        ivFotitoAsist = findViewById(R.id.ivAsistenteHomeFotitoAsist);
 
         sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE);
         Gson gson = new Gson();
@@ -53,6 +55,7 @@ public class AsistenteHomeActivity extends AppCompatActivity {
         FirebaseUser userG = FirebaseAuth.getInstance().getCurrentUser();
         tvNombre.setText(user.getNombre());
         Glide.with(this).load(user.getAvatarUrl()).into(ivPfp);
+        Glide.with(this).load(user.getAvatarUrl()).into(ivFotitoAsist);
         FirebaseFirestore.getInstance().collection("solicitudes").whereEqualTo("asistUser.uid", userG.getUid()).count().get(AggregateSource.SERVER).addOnSuccessListener(new OnSuccessListener<AggregateQuerySnapshot>() {
             @Override
             public void onSuccess(AggregateQuerySnapshot aggregateQuerySnapshot) {

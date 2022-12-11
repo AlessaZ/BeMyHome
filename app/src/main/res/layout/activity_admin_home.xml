@@ -181,14 +181,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
                         android:text="Agregar asistentes"
-                        android:textSize="18dp" />
+                        android:textSize="20dp" />
 
                     <TextView
                         style="@style/WhiteMedium12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Agrega más usuarios asistentes"
-                        android:textSize="14dp" />
+                        android:textSize="16dp" />
                 </LinearLayout>
 
                 <ImageView
@@ -232,14 +232,14 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="4dp"
                         android:text="Lista de adoptantes"
-                        android:textSize="18dp" />
+                        android:textSize="20dp" />
 
                     <TextView
                         style="@style/WhiteMedium12"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Revisa la lista de los usuarios registrados como adoptantes"
-                        android:textSize="14dp" />
+                        android:textSize="16dp" />
                 </LinearLayout>
 
                 <ImageView

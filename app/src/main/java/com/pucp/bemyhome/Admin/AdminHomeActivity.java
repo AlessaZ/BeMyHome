@@ -47,7 +47,7 @@ public class AdminHomeActivity extends AppCompatActivity {
         user = gson.fromJson(sharedPreferences.getString("user",""),User.class);
         tvNombre.setText(user.getNombre());
         Glide.with(this).load(user.getAvatarUrl()).into(ivPfp);
-        FirebaseFirestore.getInstance().collection("devices").whereEqualTo("adoptado", "adoptado").count().get(AggregateSource.SERVER).addOnSuccessListener(new OnSuccessListener<AggregateQuerySnapshot>() {
+        FirebaseFirestore.getInstance().collection("solicitudes").whereEqualTo("estado", "Solicitud aceptada").count().get(AggregateSource.SERVER).addOnSuccessListener(new OnSuccessListener<AggregateQuerySnapshot>() {
             @Override
             public void onSuccess(AggregateQuerySnapshot aggregateQuerySnapshot) {
                 totalAdopciones.setText(aggregateQuerySnapshot.getCount() + "");
