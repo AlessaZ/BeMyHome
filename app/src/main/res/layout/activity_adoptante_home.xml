@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    tools:context=".Adoptante.AdoptanteHomeActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/circle_home_adopt"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            style="@style/BottomNav"
+            android:id="@+id/bottomNavMenuAdoptHomeAct"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/menu_adoptante" />
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/llAdoptHome"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="48dp"
+            android:paddingHorizontal="24dp"
+            android:paddingVertical="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="12dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvAdopHomeNombre"
+                    style="@style/PinkSemiBoldSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Alessandra,"
+                    android:textSize="24sp"/>
+
+                <TextView
+                    android:id="@+id/tvAdopHomeSaludo"
+                    style="@style/WhiteSemiBoldTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="encuentra a tu nuevo amigo!" />
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/ivAdopHomePfp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/avatar_placeholder" />
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/etAdopHomeSearch"
+            style="@style/InputGrey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:drawableEnd="@drawable/inputicon_search"
+            android:ems="10"
+            android:hint="Buscar"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llAdoptHome" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAdopHomeCategories"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdopHomeCategorias"
+            tools:itemCount="1"
+            tools:listitem="@layout/item_image_selector_kind_pet" />
+
+        <TextView
+            android:id="@+id/tvAdopHomeCategorias"
+            style="@style/WhiteSemiBoldSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Categorías"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etAdopHomeSearch" />
+
+        <TextView
+            android:id="@+id/tvAdopHomeCategoria"
+            style="@style/WhiteSemiBoldSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="24dp"
+            android:text="Gatos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvAdopHomeCategories" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

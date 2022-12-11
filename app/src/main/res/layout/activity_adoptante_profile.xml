@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Adoptante.AdoptanteProfileActivity">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavMenuAdoptanteProfileAct"
+        style="@style/BottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_adoptante"/>
+
+    <TextView
+        android:id="@+id/tvAdoptanteProfile"
+        style="@style/BlackBoldTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Mi Perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvtxtito"
+        style="@style/BlackMedium16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Modifica los datos de tu perfil"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdoptanteProfile" />
+
+
+    <EditText
+        android:id="@+id/etAdoptanteProfileNombre"
+        style="@style/InputGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawableStart="@drawable/inputicon_name"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdoptanteProfileDNI" />
+
+    <EditText
+        android:id="@+id/etAdoptanteProfileCorreo"
+        style="@style/InputGrey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:drawableStart="@drawable/inputicon_mail"
+        android:hint="Correo"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAdoptanteProfileNombre" />
+
+    <Button
+        android:id="@+id/btnAdoptanteProfileActualizar"
+        style="@style/BtnPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:onClick="actualizarPerfil"
+        android:text="Actualizar"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etAdoptanteProfileCorreo"
+        tools:ignore="OnClick" />
+
+    <RelativeLayout
+        android:id="@+id/rlAdoptanteProfileFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvtxtito">
+
+        <ImageView
+            android:id="@+id/ivAdoptanteProfilePfp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="6dp"
+            tools:srcCompat="@drawable/avatar_placeholder" />
+
+        <ImageButton
+            android:onClick="goToChooseAvatar"
+            android:background="@android:color/transparent"
+            android:scaleType="centerCrop"
+            android:id="@+id/btnAdoptanteProfileEditFoto"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="120dp"
+            android:layout_marginRight="122dp"
+            android:src="@drawable/button_edit_profile" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAdoptanteProfileCerrarSesion"
+        style="@style/BtnBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="cerrarSesion"
+        android:text="Cerrar Sesión"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavMenuAdoptanteProfileAct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAdoptanteProfileActualizar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvAdoptanteProfileNombre"
+        style="@style/PinkSemiBoldSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlAdoptanteProfileFoto" />
+
+    <TextView
+        style="@style/BlackMedium16"
+        android:id="@+id/tvAdoptanteProfileDNI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="dni"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdoptanteProfileNombre" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

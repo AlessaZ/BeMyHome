@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "151644012177",
+    "project_id": "bemyhome-proyect",
+    "storage_bucket": "bemyhome-proyect.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:151644012177:android:633351338a8cbe48dfc930",
+        "android_client_info": {
+          "package_name": "com.pucp.bemyhome"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "151644012177-kirvhnbc5u2ri3ff2ad2etp3jfc5lkrf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASKQMJEHNUzVagXjNKEVyPV33LX1NiJqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "151644012177-kirvhnbc5u2ri3ff2ad2etp3jfc5lkrf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

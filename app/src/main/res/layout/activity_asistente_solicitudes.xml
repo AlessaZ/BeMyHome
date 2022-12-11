@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Asistente.AsistenteSolicitudesActivity">
+
+    <LinearLayout
+        android:id="@+id/llAsistenteSolicitudesEmptyView"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_marginTop="112dp"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:src="@drawable/empty_search"/>
+        <TextView
+            android:id="@+id/tvAsistenteSolicitudesTxtEmpty"
+            style="@style/PinkSemiBoldSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Aún no tienes solicitudes pendientes"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llAsistenteSolicitudesTitle"
+        style="@style/LayoutTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?actionBarItemBackground"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/ibAsistenteSolicitudesBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="?actionBarItemBackground"
+                android:clickable="true"
+                android:onClick="backButton"
+                android:paddingStart="16dp"
+                android:paddingEnd="12dp"
+                android:src="@drawable/button_back" />
+
+            <TextView
+                android:id="@+id/tvAsistenteSolicitudesTittle"
+                style="@style/PinkBoldTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp"
+                android:text="Solicitudes Pendientes" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAsistenteSolicitudesTxt"
+        style="@style/BlackRegular14"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?actionBarItemBackground"
+        android:paddingHorizontal="16dp"
+        android:layout_marginHorizontal="15dp"
+        app:layout_constraintTop_toBottomOf="@+id/llAsistenteSolicitudesTitle"
+        android:text="Revisa las solicitudes pendientes de aprobación"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAsistenteSolicitudesTxt"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llAsistenteSolicitudesTitle">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerAsistenteSolicitudes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:duration="800">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:orientation="vertical">
+                    <include layout="@layout/card_asistente_solicitud_placeholder" />
+                    <include layout="@layout/card_asistente_solicitud_placeholder" />
+                    <include layout="@layout/card_asistente_solicitud_placeholder" />
+                    <include layout="@layout/card_asistente_solicitud_placeholder" />
+                    <include layout="@layout/card_asistente_solicitud_placeholder" />
+                    <include layout="@layout/card_asistente_solicitud_placeholder" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAsistenteSolicitudes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="88dp"
+                android:background="@null"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_asistente_solicitud" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

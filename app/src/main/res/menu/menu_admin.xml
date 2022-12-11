@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/bottomNavMenuAdminHome"
+        android:icon="@drawable/menuicon_home"
+        android:title="Inicio"/>
+    <item
+        android:id="@+id/bottomNavMenuAdminAsistentes"
+        android:icon="@drawable/menuicon_users"
+        android:title="Asistentes"/>
+    <item
+        android:id="@+id/bottomNavMenuAdminProfile"
+        android:icon="@drawable/menuicon_profile"
+        android:title="Perfil"/>
+</menu>

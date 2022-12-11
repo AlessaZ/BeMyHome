@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/button_primary.xml" value="0.2025" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/button_secondary.xml" value="0.2025" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/circle_tick.xml" value="0.26" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/fab_primary_add.xml" value="0.182" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/foreground_fab_add.xml" value="0.182" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/foreground_fab_add_pressed.xml" value="0.182" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/gradient_background.xml" value="0.2025" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/gradient_btn.xml" value="0.2025" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/gradient_btn_pressed.xml" value="0.2025" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_check.xml" value="0.26" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_eye_disabled.xml" value="0.26" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_launcher_background.xml" value="0.215" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2375" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_lock.xml" value="0.26" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_mail_focused.xml" value="0.26" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_menu_home_checked.xml" value="0.3385" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_menu_home_unchecked.xml" value="0.3385" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_menu_paw_unchecked.xml" value="0.1" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_menu_profile_checked.xml" value="0.3385" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_menu_profile_unchecked.xml" value="0.3385" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_name.xml" value="0.3425" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_name_focused.xml" value="0.3425" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_plus_32.xml" value="0.182" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/ic_student_card.xml" value="0.26" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/input_grey.xml" value="0.3425" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/inputicon_lock.xml" value="0.26" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/inputicon_name.xml" value="0.3425" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/inputicon_student_card.xml" value="0.26" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/menuicon_home.xml" value="0.3385" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/menuicon_paw.xml" value="0.1" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/menuicon_paw_heart.xml" value="0.1" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/menuicon_profile.xml" value="0.3385" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/menuicon_users.xml" value="0.2285" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/pink_circle.xml" value="0.26" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/solid_btnsec.xml" value="0.2025" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/solid_btnsec_pressed.xml" value="0.2025" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable-v24/splashscreen_background.xml" value="0.2025" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/background_white.xml" value="0.22" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/button_blue.xml" value="0.215" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/gradient_background_pink.xml" value="0.215" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/gradient_btn_blue.xml" value="0.215" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/gradient_btn_pressed_blue.xml" value="0.215" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/ic_menu_paw.xml" value="0.142" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/ic_menu_paw_checked.xml" value="0.1" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/ic_menu_paw_unchecked.xml" value="0.142" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/ic_paw_heart.xml" value="0.2285" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/ic_paw_heart_unchecked.xml" value="0.2285" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/drawable/ic_paw_print.xml" value="0.1" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/font-v26/montserrat.xml" value="0.38666666666666666" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/font/montserrat.xml" value="0.1" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_admin_gestion_asistentes.xml" value="0.3484375" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_admin_home.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_admin_profile.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_adoptante_busquedas.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_adoptante_detalle_mascota.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_adoptante_form_solicitud.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_adoptante_home.xml" value="0.75" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_adoptante_profile.xml" value="0.3484375" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_adoptante_solicitudes.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_asistente_detalle_mascotas.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_asistente_home.xml" value="0.5" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_asistente_macotas.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_asistente_new_mascota_form.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_login.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_main.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_oboarding.xml" value="0.23125" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_register.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/activity_screen_message.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/layout/slide_onbording.xml" value="0.33" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/menu/menu_admin.xml" value="0.3625" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/menu/menu_adoptante.xml" value="0.33" />
+        <entry key="..\:/Users/Alessandra/AndroidStudioProjects/BeMyHome/app/src/main/res/menu/menu_asistente.xml" value="0.33" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

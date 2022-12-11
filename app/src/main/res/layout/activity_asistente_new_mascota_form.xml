@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Asistente.AsistenteNewMascotaFormActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+
+            <LinearLayout
+                android:id="@+id/llAsistenteNewMascotaFormTitle"
+                style="@style/LayoutTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/ibAsistenteNewMascotaFormBack"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?actionBarItemBackground"
+                    android:onClick="backButton"
+                    android:scaleType="center"
+                    android:src="@drawable/button_back" />
+
+                <TextView
+                    style="@style/PinkBoldTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nueva Mascota" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/BlackSemiBoldSubtitle"
+                android:layout_gravity="center"
+                android:id="@+id/tvRegisterQueRol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="¿Qué mascota vas a agregar?"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAsistenteNewMascotaFormPetSelector"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                tools:itemCount="1"
+                tools:listitem="@layout/item_image_selector_kind_pet_black" />
+            <EditText
+                android:visibility="gone"
+                android:id="@+id/etAsistenteNewMascotaFormOtrosPet"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="Especificar tipo de mascota"
+                android:inputType="textPersonName" />
+
+            <TextView
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Nombre" />
+            <EditText
+                android:id="@+id/etAsistenteNewMascotaFormNombre"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="Nombre de la mascota"
+                android:inputType="textPersonName" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/PinkSemiBoldSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Género" />
+
+                    <RadioGroup
+                        android:id="@+id/rgAsistenteNewMascotaFormGenero"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:id="@+id/rbAsistenteNewMascotaFormMacho"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Macho"
+                            android:textColor="@color/black">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/rbAsistenteNewMascotaFormHembra"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hembra"
+                            android:textColor="@color/black">
+                        </RadioButton>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/PinkSemiBoldSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Edad" />
+
+                    <EditText
+                        android:id="@+id/etAsistenteNewMascotaFormEdad"
+                        style="@style/InputGrey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:hint="Edad en meses"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="50dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAsisteNewFormTamnioTitle"
+                        style="@style/PinkSemiBoldSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Tamaño" />
+
+                    <RadioGroup
+                        android:id="@+id/rgAsistenteNewMascotaFormTamanio"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <RadioButton
+                            android:id="@+id/rbAsistenteNewMascotaFormPeque"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pequeño"
+                            android:textColor="@color/black">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/rbAsistenteNewMascotaFormMediano"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Mediano"
+                            android:textColor="@color/black">
+                        </RadioButton>
+                        <RadioButton
+                            android:id="@+id/rbAsistenteNewMascotaFormGrande"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Grande"
+                            android:textColor="@color/black">
+                        </RadioButton>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/PinkSemiBoldSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:text="Peso" />
+
+                    <EditText
+                        android:id="@+id/etAsistenteNewMascotaFormPeso"
+                        style="@style/InputGrey"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="24dp"
+                        android:hint="Peso en kg"
+                        android:inputType="number" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="8dp"
+                android:text="Fotos" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAsistenteNewMascotaFormFotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0.9"
+                android:focusable="true"
+                tools:itemCount="0"
+                tools:listitem="@layout/item_dni_upload" />
+
+            <GridLayout
+                android:id="@+id/glAsistenteNewMascotaForm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:useDefaultMargins="true">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_height="120dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="@color/unfocused"
+                    android:layout_columnWeight="1"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="16dp"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_50"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_image_placeholder_48" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_height="120dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginHorizontal="8dp"
+                    android:layout_marginVertical="16dp"
+                    android:visibility="invisible"
+                    app:cardBackgroundColor="#00FFFFFF"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/grey_25"
+                        android:scaleType="center"
+                        android:src="@drawable/ic_image_placeholder_48" />
+                </com.google.android.material.card.MaterialCardView>
+            </GridLayout>
+
+            <ProgressBar
+                android:id="@+id/pbAsistenteNewMascotaFormPhoto"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:max="100"
+                android:progress="0"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:gravity="end">
+
+                <ImageButton
+                    android:id="@+id/ibAsistenteNewMascotaFormPhotoAttach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="uploadPhotoFromDocument"
+                    android:src="@drawable/button_attachment" />
+
+                <ImageButton
+                    android:id="@+id/ibAsistenteNewMascotaFormPhotoCam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="uploadPhotoFromCamera"
+                    android:src="@drawable/button_camera" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Contexto" />
+            <EditText
+                android:id="@+id/etAsistenteNewMascotaFormSituacion"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:hint="Situación de la mascota"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nivel de actividad" />
+
+            <RadioGroup
+                android:id="@+id/rgAsistenteNewMascotaFormActividad"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rbAsistenteNewMascotaFormBajo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="12dp"
+                    android:text="Bajo"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAsistenteNewMascotaFormMedio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Medio"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAsistenteNewMascotaFormAlto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Alto"
+                    android:layout_marginEnd="12dp"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAsistenteNewMascotaFormMuyAlto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Muy alto"
+                    android:textColor="@color/black">
+                </RadioButton>
+            </RadioGroup>
+            <TextView
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Características de la mascota" />
+
+            <EditText
+                android:id="@+id/etAsistenteNewMascotaFormCaracteristicas"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Ejm: juguetón, cariñoso, etc"
+                android:nextFocusDown="@+id/etAsistenteNewMascotaFormCaracteristicas"
+                android:inputType="text" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cgAsistenteNewMascotaFormCaracteristicas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/etAsistenteNewMascotaFormCaracteristicas"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="10dp">
+            </com.google.android.material.chip.ChipGroup>
+
+            <Button
+                android:onClick="anadirDispositivo"
+                android:id="@+id/btnAsistenteNewMascotaFormAnadir"
+                style="@style/BtnPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="32dp"
+                android:text="Añadir" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pbetAsistenteNewMascotaFormLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

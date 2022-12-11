@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Adoptante.AdoptanteAdopcionesRecycleActivity">
+
+    <LinearLayout
+        android:id="@+id/llAdoptanteAdopcionesRecycleTitle"
+        style="@style/LayoutTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/ibAdoptanteAdopcionesRecycleBack"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="?actionBarItemBackground"
+            android:clickable="true"
+            android:onClick="backButton"
+            android:paddingStart="16dp"
+            android:paddingEnd="12dp"
+            android:src="@drawable/button_back" />
+
+        <TextView
+            android:id="@+id/tvClienteReservasTittle"
+            style="@style/PinkSemiBoldSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:text="Reservas en curso" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAdoptanteAdopcionesRecycleTxt"
+        style="@style/BlackMedium16"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="15dp"
+        android:text="Reservas en curso"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llAdoptanteAdopcionesRecycleTitle" />
+
+    <LinearLayout
+        android:id="@+id/llAdoptanteAdopcionesRecycleEmptyView"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:layout_marginTop="112dp"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:src="@drawable/empty_search"/>
+        <TextView
+            android:id="@+id/tvAdoptanteAdopcionesRecycleTxtEmpty"
+            style="@style/WhiteSemiBoldSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Aún no tienes solicictudes que hayan sido rechazadas"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAdoptanteAdopcionesRecycleTxt"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginHorizontal="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdoptanteAdopcionesRecycleTxt">
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerAdoptanteAdopcionesRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:duration="800">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <include layout="@layout/card_adoptante_adopciones_placeholder" />
+                    <include layout="@layout/card_adoptante_adopciones_placeholder" />
+                    <include layout="@layout/card_adoptante_adopciones_placeholder" />
+                    <include layout="@layout/card_adoptante_adopciones_placeholder" />
+                    <include layout="@layout/card_adoptante_adopciones_placeholder" />
+                    <include layout="@layout/card_adoptante_adopciones_placeholder" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAdoptanteAdopcionesRecycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="88dp"
+                android:background="@null"
+                android:nestedScrollingEnabled="false"
+                tools:itemCount="5"
+                tools:listitem="@layout/card_adoptante_adopciones" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

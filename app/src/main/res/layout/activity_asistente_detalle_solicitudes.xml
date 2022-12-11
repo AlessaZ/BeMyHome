@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Asistente.AsistenteDetalleSolicitudesActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+            <LinearLayout
+                android:id="@+id/llAsistenteDetalleSolicitudesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/ibAsistenteDetalleSolicitudesBack"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?actionBarItemBackground"
+                    android:onClick="backButton"
+                    android:scaleType="center"
+                    android:src="@drawable/button_back" />
+
+                <TextView
+                    style="@style/PinkBoldTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detalle de adopción" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="20dp">
+
+                <ImageView
+                    android:id="@+id/ivAsistenteDetalleSolicitudesImageAdopt"
+                    android:layout_width="96dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/avatar_placeholder" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAsistenteDetalleSolicitudesNombreAdopt"
+                        style="@style/BlackSemibold16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="3 meses" />
+
+                    <TextView
+                        android:id="@+id/tvAsistenteDetalleSolicitudesDni"
+                        style="@style/BlackMedium16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="72188594" />
+                    <TextView
+                        android:id="@+id/tvAsistenteDetalleSolicitudesGeFechaReserva"
+                        style="@style/BlackMedium16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Hembra," />
+
+                    <TextView
+                        android:id="@+id/tvAsistenteDetalleSolicitudesEstado"
+                        style="@style/BlackMedium16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:text="Daenerys" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:paddingVertical="10dp">
+
+                <ImageView
+                    android:id="@+id/ivAsistenteDetalleSolicitudesImagePet"
+                    android:layout_width="96dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="12dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/avatar_placeholder" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvAsistenteDetalleSolicitudesGenero"
+                            style="@style/BlackMedium14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:textSize="15dp"
+                            android:text="Hembra," />
+
+                        <TextView
+                            android:id="@+id/tvAsistenteDetalleSolicitudesAnios"
+                            style="@style/BlackMedium14"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:textSize="15dp"
+                            android:text="3 meses" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvAsistenteDetalleSolicitudesNombre"
+                        style="@style/BlackSemibold16"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:text="Daenerys" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/ivAsistenteDetalleSoliPetCategoria"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/cat" />
+
+                        <TextView
+                            android:id="@+id/tvAsistenteDetalleSoliPetCategoria"
+                            style="@style/PinkMedium16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:text="Gato" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llvLugarRecojo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesLugarRecojoTIttle"
+                    style="@style/PinkSemiBoldSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Lugar de recojo" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/glAsistenteDetalleSolicitudesRecojoLugar"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="8dp"
+                    android:backgroundTint="@color/unfocused"
+                    android:columnCount="2"
+                    android:orientation="horizontal"
+                    android:useDefaultMargins="true"
+                    app:cardCornerRadius="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.mapbox.mapboxsdk.maps.MapView
+                        android:id="@+id/mvAsistenteDetalleSolicitudesMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        mapbox:mapbox_cameraTargetLng="-77.02824"
+                        mapbox:mapbox_cameraZoom="11" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesLugarRecojoNombre"
+                    style="@style/BlackSemiBoldSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:gravity="center_horizontal"
+                    android:text="Lugar de recojo" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAsistenteDetalleSolicitudesMotivoRechazo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesMotivoRechazoTIttle"
+                    style="@style/PinkSemiBoldSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Motivo de rechazo" />
+
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesMotivoRechazo"
+                    style="@style/BlackMedium16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tvAAsistenteDetalleSolicitudesMotivo"
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="Motivo" />
+
+            <TextView
+                android:id="@+id/tVAdoptanteDetalleSoliMotivo"
+                style="@style/BlackMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/tvAsistenteDetalleSolicitudesDomicilio"
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:text="Sobre el domicilio" />
+
+            <TextView
+                android:id="@+id/tvAsistenteDetalleSolicitudesDomicilioType"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="13dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    style="@style/BlackMediumSubtitle"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="¿Es propio o alquilado?" />
+
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesAlquiladoOno"
+                    style="@style/PinkMedium16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    style="@style/BlackMediumSubtitle"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="¿Tiene jardín o patio?" />
+
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesPatioOno"
+                    style="@style/PinkMedium16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    style="@style/BlackMediumSubtitle"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Cantidad de personas en casa:" />
+
+                <TextView
+                    android:id="@+id/tVAsistenteDetalleSolicitudesCantidadPersonas"
+                    style="@style/PinkMedium16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    style="@style/BlackMediumSubtitle"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="¿Alguien es alérgico a los animales?" />
+
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesAlergico"
+                    style="@style/PinkMedium16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesCantidadMascotas"
+                    style="@style/BlackMediumSubtitle"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Cantidad de mascotas en casa:" />
+
+                <TextView
+                    android:id="@+id/tVAsistenteDetalleSolicitudesCantidadMascotas"
+                    style="@style/PinkMedium16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    style="@style/BlackMediumSubtitle"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="¿Tienen sus vacunas al día?" />
+
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesVacunas"
+                    style="@style/PinkMedium16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvAsistenteDetalleSolicitudesMascota"
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:text="Sobre la mascota" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesDedicacion"
+                    style="@style/BlackMediumSubtitle"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Tiempo para dedicar a la mascota:" />
+
+                <TextView
+                    android:id="@+id/tVAsistenteDetalleSolicitudesDedicacion"
+                    style="@style/PinkMedium16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesPaseo"
+                    style="@style/BlackMediumSubtitle"
+                    android:textSize="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:text="Tiempo para pasear a la mascota:" />
+
+                <TextView
+                    android:id="@+id/tVAsistenteDetalleSolicitudesPaseo"
+                    style="@style/PinkMedium16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+
+            <TextView
+                style="@style/BlackMediumSubtitle"
+                android:textSize="16dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="10dp"
+                android:text="¿Dónde pasaría la mayor parte del tiempo?" />
+
+            <TextView
+                android:id="@+id/tvAsistenteDetalleSolicitudesLugar"
+                style="@style/PinkMedium16"
+                android:textAlignment="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvAsistenteDetalleSolicitudesDNI"
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="15dp"
+                android:text="DNI del adoptante" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAsistenteDetalleSolicitudesDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_weight="0.9"
+                android:focusable="true"
+                tools:itemCount="0"
+                tools:listitem="@layout/item_dni_upload" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/glAsistenteDetalleSolicitudesDNI"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/grey_50"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:useDefaultMargins="true"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/ivAsistenteDetalleSolicitudesDNI"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="center"
+                    android:src="@drawable/ic_photo" />
+            </androidx.cardview.widget.CardView>
+
+            <ProgressBar
+                android:id="@+id/pbAsistenteDetalleSolicitudesDNIPhoto"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:max="100"
+                android:progress="0"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llAsistenteDetalleSolicitudesButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center">
+
+                <Button
+                    android:id="@+id/btnAsistenteDetalleSolicitudesAceptarSoli"
+                    style="@style/BtnPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Aceptar" />
+
+                <Button
+                    android:id="@+id/btnAsistenteDetalleSolicitudesRechazarSoli"
+                    style="@style/BtnBlue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="20dp"
+                    android:text="Rechazar" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAsistenteDetalleResponseInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvAsistenteDetalleSolicitudesResponseTittle"
+                    style="@style/PinkSemiBoldSubtitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="Respondido por" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="24dp"
+                    android:layout_marginBottom="10dp"
+                    android:paddingVertical="16dp">
+
+                    <ImageView
+                        android:id="@+id/ivAsistenteDetalleSolicitudesImageAsist"
+                        android:layout_width="96dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="12dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/avatar_placeholder" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvAsistenteDetalleSolicitudesNombreAsist"
+                            style="@style/BlackSemibold16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="4dp"
+                            android:text="Oliver Bustamente" />
+
+                        <TextView
+                            android:id="@+id/tvAsistenteDetalleSolicitudesFechaResponseAsist"
+                            style="@style/BlackMedium16"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="14 Oct 2022 10:05" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pbAdoptanteDetalleSoliLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

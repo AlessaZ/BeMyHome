@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UnloginUser.RegisterActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".UnloginUser.RegisterActivity">
+
+        <LinearLayout
+            android:id="@+id/llRegisterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/BlackBoldTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Be"
+                android:textSize="36sp" />
+            <TextView
+                style="@style/PinkBoldTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="My"
+                android:textSize="36sp" />
+
+            <TextView
+                style="@style/BlackBoldTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="36sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvRegisterCreate"
+            style="@style/BlackBoldTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Crea una cuenta"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llRegisterTitle" />
+
+        <EditText
+            android:id="@+id/etRegisterNombre"
+            style="@style/InputGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:drawableStart="@drawable/inputicon_name"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvRegisterCreate" />
+
+        <EditText
+            android:id="@+id/etRegisterDNI"
+            style="@style/InputGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableStart="@drawable/inputicon_student_card"
+            android:hint="DNI"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRegisterNombre" />
+
+        <EditText
+            android:id="@+id/etRegisterTelf"
+            style="@style/InputGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableStart="@drawable/inputicon_tel"
+            android:hint="Teléfono"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRegisterDNI" />
+
+        <EditText
+            android:id="@+id/etRegisterCorreo"
+            style="@style/InputGrey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:drawableStart="@drawable/inputicon_mail"
+            android:hint="Correo"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etRegisterTelf" />
+
+        <FrameLayout
+            android:id="@+id/flRegisterContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/etRegisterCorreo"
+            android:layout_marginTop="32dp">
+
+            <EditText
+                android:id="@+id/etRegisterContrasena"
+                style="@style/InputGrey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/inputicon_lock"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:paddingEnd="44dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center|end"
+                android:onClick="showHidePass"
+                android:paddingVertical="8dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/ic_eye_open" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnRegisterRegistrar"
+            style="@style/BtnPrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:onClick="registerUser"
+            android:text="Registrar"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/flRegisterContrasena" />
+
+        <TextView
+            style="@style/BlackMedium16"
+            android:id="@+id/tvRegisterYaTienes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="¿Ya tienes una cuenta?"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegisterRegistrar" />
+
+        <Button
+            android:id="@+id/btnRegisterGoToLogin"
+            style="@style/BtnBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"
+            android:onClick="goToLogin"
+            android:text="Iniciar Sesión"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvRegisterYaTienes"
+            app:layout_goneMarginBottom="24dp" />
+
+        <ProgressBar
+            android:id="@+id/pbRegister"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

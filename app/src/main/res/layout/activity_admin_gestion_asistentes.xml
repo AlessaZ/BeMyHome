@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.AdminGestionAsistentesActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottomNavMenuAdminGestionAsistentesAct"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                style="@style/PinkBoldTitle"
+                android:layout_height="wrap_content"
+                android:text="Lista de asistentes"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:textAlignment="center"
+                style="@style/BlackRegular16"
+                android:layout_height="wrap_content"
+                android:text="Encuentra aquí la lista de todos los usuarios asistentes"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/etAdminGestionAsistentesSearch"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="10dp"
+                android:drawableEnd="@drawable/inputicon_search"
+                android:ems="10"
+                android:hint="Buscar"
+                android:inputType="textPersonName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <LinearLayout
+                android:id="@+id/llAdminGestionAsistentesEmptyView"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal">
+                <ImageView
+                    android:layout_marginTop="112dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="280dp"
+                    android:src="@drawable/empty_search"/>
+                <TextView
+                    android:id="@+id/tvAdminGestionAsistentesTxtEmpty"
+                    style="@style/PinkSemiBoldSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="No se han obtenido resultados en la lista de asistentes"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerAdminGestionAsistentes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:duration="800">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="anadirAsistenteActivity"
+                    android:orientation="vertical">
+
+                    <include layout="@layout/card_admin_asistente_user_placeholder" />
+
+                    <include layout="@layout/card_admin_asistente_user_placeholder" />
+
+                    <include layout="@layout/card_admin_asistente_user_placeholder" />
+
+                    <include layout="@layout/card_admin_asistente_user_placeholder" />
+
+                    <include layout="@layout/card_admin_asistente_user_placeholder" />
+                </LinearLayout>
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAdminGestionAsistentes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/card_admin_asistente_user"
+                tools:itemCount="5"
+                android:background="@null"
+                android:layout_marginBottom="88dp"
+                android:nestedScrollingEnabled="false"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdminGestionAsistentesCreate"
+        android:onClick="anadirAsistenteActivity"
+        style="@style/FabPrimaryUserAdd"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavMenuAdminGestionAsistentesAct"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        style="@style/BottomNav"
+        android:id="@+id/bottomNavMenuAdminGestionAsistentesAct"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_admin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Adoptante.AdoptanteDetalleMascotaActivity">
+
+
+    <Button
+        android:id="@+id/btnAdoptar"
+        style="@style/BtnPrimary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="224dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="64dp"
+        android:text="Adoptar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/llAdoptDetalleMascota"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <TextView
+            android:id="@+id/tvAdoptDetalleNombre"
+            style="@style/BlackSemiBoldSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daenerys"
+            android:textAllCaps="true"
+            android:textSize="24sp" />
+
+
+        <LinearLayout
+            android:id="@+id/llAdoptDetalleCategoria"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/ivAdoptDetalleCategoria"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/cat" />
+
+            <TextView
+                android:id="@+id/tvAdoptKindPet"
+                style="@style/PinkMedium16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:text="Gato" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llAdoptDetalleCaracteristicas"
+            android:layout_marginTop="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAdoptDetalleMascotaGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAdoptDetalleCategoria"
+                app:strokeColor="@color/pink_main"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:id="@+id/llAdoptDetalleGenero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAdopDetalleMascotaGenero"
+                        style="@style/PinkMedium16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Sexo" />
+
+                    <TextView
+                        android:id="@+id/tvCAdopDetalleMascotaGenerito"
+                        style="@style/BlackSemibold16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hembra" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAdoptDetalleMascotaEdad"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="5dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAdoptDetalleCategoria"
+                app:strokeColor="@color/pink_main"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:id="@+id/llAdoptDetalleEdad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAdopDetalleMascotaEdad"
+                        style="@style/PinkMedium16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edad" />
+
+                    <TextView
+                        android:id="@+id/tvCAdopDetalleMascotaEdadcita"
+                        style="@style/BlackSemibold16"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 meses" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAdoptDetalleMascotaPeso"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                android:layout_marginEnd="5dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAdoptDetalleCategoria"
+                app:strokeColor="@color/pink_main"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:id="@+id/llAdoptDetallePeso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAdopDetalleMascotaPeso"
+                        style="@style/PinkMedium16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Peso" />
+
+                    <TextView
+                        android:id="@+id/tvCAdopDetalleMascotaPesito"
+                        style="@style/BlackSemibold16"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3 kg" />
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvAdoptDetalleMascotaTamanio"
+                android:layout_width="85dp"
+                android:layout_height="70dp"
+                app:cardElevation="5dp"
+                app:cardBackgroundColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/llAdoptDetalleCategoria"
+                app:strokeColor="@color/pink_main"
+                app:strokeWidth="2dp">
+
+                <LinearLayout
+                    android:id="@+id/llAdoptDetalleTamanio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAdopDetalleMascotaTamanio"
+                        style="@style/PinkMedium16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tamaño" />
+
+                    <TextView
+                        android:id="@+id/tvCAdopDetalleMascotaTamanito"
+                        style="@style/BlackSemibold16"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pequeño" />
+                </LinearLayout>
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvAdopDetalleMascotaDescripcion"
+            style="@style/BlackRegular16"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:text="Daenerys fue abandonada en un río por su último dueño. Parte de nuestro equipo la rescató y ahora se encuentra buscando un hogar que le brinde amor." />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp">
+
+            <TextView
+                style="@style/BlackRegular16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Características:" />
+
+            <TextView
+                android:id="@+id/tvAdopDetalleMascotaCaracteristicas"
+                style="@style/BlackSemibold16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Juguetón, travieso" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/BlackRegular16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nivel de actividad:" />
+
+            <TextView
+                android:id="@+id/tvAdopDetalleMascotaNivelActividad"
+                style="@style/BlackSemibold16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Muy alto" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.denzcoskun.imageslider.ImageSlider
+                android:id="@+id/isAdopDisp"
+                android:layout_width="wrap_content"
+                android:layout_height="300dp"
+                android:background="@drawable/background_white"
+                app:iss_auto_cycle="true"
+                app:iss_delay="2000"
+                app:iss_period="2000"
+                app:iss_placeholder="@drawable/image_pets_placeholder"
+                app:iss_title_background="@string/app_name">
+
+                <ImageButton
+                    android:id="@+id/ibClienteDetallesDispBack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="11dp"
+                    android:background="?actionBarItemBackground"
+                    android:onClick="backButton"
+                    android:scaleType="center"
+                    android:src="@drawable/button_back_alt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </com.denzcoskun.imageslider.ImageSlider>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

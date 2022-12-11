@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Adoptante.AdoptanteFormSolicitudActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp">
+            <LinearLayout
+                android:id="@+id/llAdoptanteFormTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/ibAdoptanteFormBack"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?actionBarItemBackground"
+                    android:onClick="backButton"
+                    android:scaleType="center"
+                    android:src="@drawable/button_back" />
+
+                <TextView
+                    style="@style/PinkBoldTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detalle de adopción" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvAdoptanteFormTxT"
+                style="@style/BlackMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="8dp"
+                android:text="Completa este formulario para realizar la adopción" />
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormMotivo"
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:text="Motivo" />
+
+            <EditText
+                android:id="@+id/etAdoptanteFormMotivo"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Especifique el motivo de la adopción"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormDomicilio"
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Sobre el domicilio" />
+
+            <RadioGroup
+                android:id="@+id/rgAdoptanteFormDomicilio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormCasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Casa"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormApartamento"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="Apartamento"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormPiso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Piso"
+                    android:textColor="@color/black">
+                </RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormAlquiladoOno"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="¿Es propio o alquilado?" />
+
+            <RadioGroup
+                android:id="@+id/rgAdoptanteFormAlquiladoOno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormPropio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="Propio"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormAlquilado"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Alquilado"
+                    android:textColor="@color/black">
+
+                </RadioButton>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormPatioOno"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="¿Tiene jardín o patio?" />
+
+            <RadioGroup
+                android:id="@+id/rgAdoptanteFormPatioOno"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormPatio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="Patio"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormJardin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Jardín"
+                    android:textColor="@color/black">
+                </RadioButton>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormCantidadPersonas"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Cantidad de personas en casa:" />
+
+            <EditText
+                android:id="@+id/etAdoptanteFormCantidadPersonas"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Número de personas"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormAlergico"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="¿Alguien es alérgico a los animales?" />
+
+            <RadioGroup
+                android:id="@+id/rgAdoptanteFormAlergico"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormAlergicoSi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="Sí"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormAlergicoNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="No"
+                    android:textColor="@color/black">
+                </RadioButton>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormCantidadMascotas"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Cantidad de mascotas en casa:" />
+
+            <EditText
+                android:id="@+id/etAdoptanteFormCantidadMascotas"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Número de mascotas"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormVacunas"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="¿Tienen sus vacunas al día?" />
+
+            <RadioGroup
+                android:id="@+id/rgAdoptanteFormVacunas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormVacunasSi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="Sí"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormVacunasNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="No"
+                    android:textColor="@color/black">
+                </RadioButton>
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormMascota"
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Sobre la mascota" />
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormDedicacion"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Tiempo para dedicar a la mascota:" />
+
+            <EditText
+                android:id="@+id/etAdoptanteFormDedicacion"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Número de horas al día"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvAdoptantePaseo"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Tiempo para pasear a la mascota:" />
+
+            <EditText
+                android:id="@+id/etAdoptanteFormPaseo"
+                style="@style/InputGrey"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Número de horas al día"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/tvAdoptanteLugar"
+                style="@style/PinkMedium16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="¿Dónde pasaría la mayor parte del tiempo?" />
+
+            <RadioGroup
+                android:id="@+id/rgAdoptanteFormLugar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormLugarDentroCasa"
+                    android:layout_width="92dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:buttonTint="@color/pink_main"
+                    android:text="Dentro de casa"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormLugarPatio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="Patio"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormLugarJardín"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="10dp"
+                    android:text="Jardín"
+                    android:textColor="@color/black">
+                </RadioButton>
+                <RadioButton
+                    android:id="@+id/rbAdoptanteFormLugarFueraCasa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Fuera de casa"
+                    android:textColor="@color/black">
+                </RadioButton>
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tvAdoptanteFormDNI"
+                style="@style/PinkSemiBoldSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="DNI del adoptante" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivAdoptanteFormDNI"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/grey_50"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_image_placeholder_48"
+                app:shapeAppearanceOverlay="@style/roundedCornersImageView" />
+
+
+            <ProgressBar
+                android:id="@+id/pbAdoptanteDNIPhoto"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:max="100"
+                android:progress="0"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@+id/llAdoptanteFormTitleDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:gravity="end">
+
+                <ImageButton
+                    android:id="@+id/ibAdoptanteFormPhotoAttach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="uploadPhotoFromDocument"
+                    android:src="@drawable/button_attachment" />
+
+                <ImageButton
+                    android:id="@+id/ibAdoptanteFormPhotoCam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:onClick="uploadPhotoFromCamera"
+                    android:src="@drawable/button_camera" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAdoptanteFormEnviarSoli"
+                style="@style/BtnPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="realizarSolicitud"
+                android:text="Enviar Solicitud" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/pbAdoptanteFormLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

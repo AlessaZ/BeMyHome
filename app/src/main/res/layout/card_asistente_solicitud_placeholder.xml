@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    app:cardBackgroundColor="#00FFFFFF"
+    app:cardCornerRadius="0dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:background="@color/pink_main"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                style="@style/WhiteSemiBold12"
+                android:layout_width="match_parent"
+                android:layout_height="14dp"
+                android:layout_marginBottom="4dp"
+                android:textAllCaps="true"
+                android:background="@color/grey_slide_unselected"/>
+
+            <View
+                style="@style/WhiteBold14"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="4dp"
+                android:background="@color/unfocused"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                style="@style/WhiteRegular12"
+                android:background="@color/grey_slide_unselected"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:dividerInsetEnd="5dp"
+            app:dividerColor="@color/grey_50"
+            app:dividerInsetStart="5dp" />
+
+        <Button
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTint="@color/grey_slide_unselected"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Detalle"
+            android:textColor="@color/unfocused"
+            android:textSize="14dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.pucp.bemyhome">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.screen.portrait" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BeMyHome"
+        tools:targetApi="31">
+        <activity
+            android:name=".Adoptante.AdoptanteAdopcionesRecycleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Asistente.AsistenteUpdateDeviceFormActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ChooseAvatarActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Asistente.AsistenteRejectSoliActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Asistente.AsistenteAcceptSoliActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Admin.AdminUpdateAsistenteActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Adoptante.AdoptanteDetalleSolicitudActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Asistente.AsistenteProfileActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Admin.AdminProfileActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".UnloginUser.OlvidarContraseniaActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".UnloginUser.NoVerificadoActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Asistente.AsistenteDetalleSolicitudesActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Asistente.AsistenteSolicitudesActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Asistente.AsistenteNewMascotaFormActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Asistente.AsistenteDetalleMascotasActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Asistente.AsistenteMacotasActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Adoptante.AdoptanteBusquedasActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Adoptante.AdoptanteDetalleMascotaActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Adoptante.AdoptanteFormSolicitudActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Adoptante.AdoptanteAdopcionesActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Admin.AdminNewAsistenteActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Admin.AdminAdoptantesListActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Admin.AdminGestionAsistentesActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Asistente.AsistenteHomeActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Adoptante.AdoptanteHomeActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Adoptante.AdoptanteProfileActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".Admin.AdminHomeActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".UnloginUser.RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".ScreenMessageActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".UnloginUser.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".UnloginUser.OboardingActivity"
+            android:exported="false"
+            android:screenOrientation="userPortrait" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.BeMyHome.Starting">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

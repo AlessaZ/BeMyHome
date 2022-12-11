@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">BeMyHome</string>
+    <string name="onboarding_abrazo">Salva una vida. Adopta una mascota.</string>
+    <string name="onboarding_gatito">¡Tu mejor amigo está esperando! Deja que tu amor cambie el mundo</string>
+    <string name="onboarding_perrito">¡Adopta!¡No compres! Solo necesitas corazón</string>
+    <string name="onboarding_start">Comenzar</string>
+    <string name="kind_pet_cat">Gato</string>
+    <string name="kind_pet_dog">Perro</string>
+    <string name="kind_pet_bird">Ave</string>
+    <string name="kind_pet_rabbit">Conejo</string>
+    <string name="kind_pet_others">Otros</string>
+    <string name="genero_hembra">Hembra</string>
+    <string name="genero_macho">Macho</string>
+
+    <string name="preferences_key">Settings</string>
+    <string name="mapbox_access_token">pk.eyJ1IjoiYXptb3JhbGVzbSIsImEiOiJjbGI5cXg0MnQwd2ZvM3NvMm5ob2hwbmx3In0.sm8hti-UFQfyS1_7RAt_8w</string>
+
+    <string-array name="avatars">
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar1.png?alt=media&amp;token=aaadeed0-da3f-4f12-b6a8-90538cc063e2</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar10.png?alt=media&amp;token=4eb9d833-75be-4832-bdbf-2cf8c0d84460</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar11.png?alt=media&amp;token=7810839e-1dfe-45a5-8351-e92f294c5ff8</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar12.png?alt=media&amp;token=73cc8301-0aaf-492d-8ca1-9d3b93764780</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar13.png?alt=media&amp;token=c085f897-e637-4d41-9336-c3f85fd67f24</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar2.png?alt=media&amp;token=03154373-700e-4a11-9d88-e14eb9ee169b</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar3.png?alt=media&amp;token=916f7585-a256-4cd0-9d45-a9b0cf24cf4c</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar5.png?alt=media&amp;token=6c9a0442-cbe1-44a4-ab6c-f5f54556f556</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar6.png?alt=media&amp;token=ab7db835-f001-417e-b19c-abf79abc25b2</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar7.png?alt=media&amp;token=93f1711c-1f80-4cc6-a751-98d8bd9a2d1b</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar8.png?alt=media&amp;token=f8b2d87c-6691-4e6b-8d4d-76069a2c3c91</item>
+        <item>https://firebasestorage.googleapis.com/v0/b/bemyhome-proyect.appspot.com/o/avatars%2Favatar9.png?alt=media&amp;token=ed3d8d7b-b1f4-422a-9875-c3b2af5dbb5d</item>
+    </string-array>
+</resources>

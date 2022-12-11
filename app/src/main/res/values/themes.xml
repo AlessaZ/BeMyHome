@@ -1,0 +1,503 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.BeMyHome" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue_light</item>
+        <item name="colorPrimaryVariant">@color/blue_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/pink_main</item>
+        <item name="colorSecondaryVariant">@color/pink_main</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@drawable/background_white</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+    <!-- Splash screen theme -->
+    <style name="Theme.BeMyHome.Starting" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Set the splash screen background, animated icon, and animation duration. -->
+        <item name="android:windowBackground">@drawable/splashscreen_background</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@android:color/transparent</item>
+    </style>
+
+    <!-- Estilos de texto -->
+    <!-- Títulos -->
+    <style name="WhiteBoldTitle">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="WhiteSemiBoldTitle">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="WhiteSemiBold12">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="WhiteMediumTitle">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="PinkBoldTitle">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/pink_main</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <!-- Títulos -->
+    <style name="BlackBoldTitle">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="BlackSemiBoldTitle">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="BlackMediumTitle">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    <!-- Subtítulos -->
+    <style name="WhiteSemiBoldSubtitle">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="WhiteMediumSubtitle">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="BlackSemiBoldSubtitle">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="PinkSemiBoldSubtitle">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/pink_main</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="BlackMediumSubtitle">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <!-- Tamaño 16 -->
+    <style name="WhiteBold16">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="WhiteBold14">
+        <item name="android:fontFamily">@font/montserrat_bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="WhiteSemibold16">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="WhiteSemibold14">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="BlackSemibold16">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="WhiteSemibold12">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="WhiteMedium16">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="WhiteMedium14">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="BlackMedium14">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="BlackMedium16">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="WhiteRegular16">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="WhiteRegular14">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="WhiteRegular13">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="BlackRegular13">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="BlackRegular14">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="PinkRegular13">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/pink_main</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="PinkRegular14">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/pink_main</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="BlackRegular16">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="PinkMedium16">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/pink_main</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="GreyMedium16">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/unfocused</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!-- Tamaño 12-->
+    <style name="WhiteMedium12">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="UnselectedMedium12">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/grey_image_unselected</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- Tamaño 10 -->
+    <style name="UncheckedRegular10">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/unfocused</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="WhiteRegular12">
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColor">@color/unfocused</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="WhiteMedium10">
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+        <item name="android:textColor">@color/unfocused</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!-- Estilos btn -->
+    <style name="BtnPrimary" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="enforceMaterialTheme">false</item>
+        <item name="android:background">@drawable/button_primary</item>
+        <item name="enforceTextAppearance">false</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingHorizontal">48dp</item>
+        <item name="android:paddingVertical">14dp</item>
+    </style>
+
+    <style name="BtnPrimaryWi" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="enforceMaterialTheme">false</item>
+        <item name="android:background">@drawable/button_primary</item>
+        <item name="enforceTextAppearance">false</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingHorizontal">38dp</item>
+        <item name="android:paddingVertical">10dp</item>
+    </style>
+
+    <style name="BtnSecondary" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="enforceMaterialTheme">false</item>
+        <item name="android:background">@drawable/button_secondary</item>
+        <item name="enforceTextAppearance">false</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/pink_main</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingHorizontal">48dp</item>
+        <item name="android:paddingVertical">14dp</item>
+    </style>
+
+    <style name="BtnBlue" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="enforceMaterialTheme">false</item>
+        <item name="android:background">@drawable/button_blue</item>
+        <item name="enforceTextAppearance">false</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingHorizontal">48dp</item>
+        <item name="android:paddingVertical">14dp</item>
+    </style>
+
+    <style name="BtnBlueWi" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="enforceMaterialTheme">false</item>
+        <item name="android:background">@drawable/button_blue</item>
+        <item name="enforceTextAppearance">false</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingHorizontal">38dp</item>
+        <item name="android:paddingVertical">10dp</item>
+    </style>
+
+    <style name="BtnWhite" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="enforceMaterialTheme">false</item>
+        <item name="android:background">@drawable/button_white</item>
+        <item name="enforceTextAppearance">false</item>
+        <item name="backgroundTint">@null</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingHorizontal">48dp</item>
+        <item name="android:paddingVertical">14dp</item>
+    </style>
+    <!-- Inputs!! -->
+    <style name="InputGrey">
+        <item name="android:drawablePadding">12dp</item>
+        <item name="fontFamily">@font/montserrat_regular</item>
+        <item name="android:textColorHint">@color/unfocused</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:ems">16</item>
+        <item name="android:background">@drawable/input_grey</item>
+        <item name="android:paddingVertical">8dp</item>
+        <item name="android:paddingHorizontal">16dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- BottomNav -->
+    <style name="Golend.Custom.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">#00FFFFFF</item>
+    </style>
+    <style name="BottomNav" >
+        <item name="android:background">@color/blue_dark</item>
+        <item name="itemPaddingTop">8dp</item>
+        <item name="itemPaddingBottom">12dp</item>
+        <item name="itemIconSize">22dp</item>
+        <item name="itemIconTint">@color/nav_icon_color</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="itemTextAppearanceInactive">@style/UncheckedRegular10</item>
+        <item name="itemTextAppearanceActive">@style/WhiteMedium10</item>
+        <item name="itemActiveIndicatorStyle">@style/Golend.Custom.Indicator</item>
+    </style>
+
+    <!-- FAB -->
+    <style name="FabPrimary" parent="Widget.Design.FloatingActionButton">
+        <item name="android:foreground">@drawable/fab_primary_add</item>
+        <item name="fabSize">normal</item>
+        <item name="borderWidth">0dp</item>
+        <item name="fabCustomSize">56dp</item>
+        <item name="maxImageSize">56dp</item>
+        <item name="shapeAppearanceOverlay">@style/fabRounded</item>
+    </style>
+    <style name="FabPrimaryUserAdd" parent="Widget.Design.FloatingActionButton">
+        <item name="android:foreground">@drawable/fab_primary_user_add</item>
+        <item name="android:background">?actionBarItemBackground</item>
+        <item name="fabSize">normal</item>
+        <item name="borderWidth">0dp</item>
+        <item name="fabCustomSize">56dp</item>
+        <item name="maxImageSize">56dp</item>
+        <item name="shapeAppearanceOverlay">@style/fabRounded</item>
+    </style>
+    <style name="fabRounded">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">100%</item>
+    </style>
+
+    <!-- Chips (y Dale) -->
+    <style name="chipTextUnselected" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/montserrat_medium</item>
+    </style>
+    <style name="chipTextSelected" parent="TextAppearance.MaterialComponents.Chip">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+    </style>
+    <style name="chipUnselected">
+        <item name="chipBackgroundColor">@color/blue_dark</item>
+        <item name="chipCornerRadius">24dp</item>
+        <item name="chipStartPadding">12dp</item>
+        <item name="chipEndPadding">12dp</item>
+        <item name="textStartPadding">0dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="iconStartPadding">0dp</item>
+        <item name="iconEndPadding">2dp</item>
+        <item name="chipIconSize">36dp</item>
+        <item name="chipMinHeight">44dp</item>
+        <item name="chipIconTint">@color/white</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">@style/chipTextUnselected</item>
+        <item name="chipStrokeColor">@color/grey_25</item>
+        <item name="chipStrokeWidth">0.5dp</item>
+    </style>
+    <style name="chipSelected">
+        <item name="chipBackgroundColor">@color/blue_dark</item>
+        <item name="chipCornerRadius">24dp</item>
+        <item name="chipStartPadding">12dp</item>
+        <item name="chipEndPadding">12dp</item>
+        <item name="textStartPadding">0dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="iconStartPadding">0dp</item>
+        <item name="iconEndPadding">2dp</item>
+        <item name="chipIconSize">36dp</item>
+        <item name="chipIconTint">@color/pink_main</item>
+        <item name="chipMinHeight">44dp</item>
+        <item name="android:textColor">@color/pink_main</item>
+        <item name="android:textAppearance">@style/chipTextSelected</item>
+        <item name="chipStrokeColor">@color/pink_main</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="chipUnselected_option">
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="chipCornerRadius">24dp</item>
+        <item name="chipStartPadding">12dp</item>
+        <item name="chipEndPadding">12dp</item>
+        <item name="textStartPadding">0dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="iconStartPadding">0dp</item>
+        <item name="iconEndPadding">2dp</item>
+        <item name="chipIconSize">36dp</item>
+        <item name="chipMinHeight">44dp</item>
+        <item name="android:textColor">@color/pink_main</item>
+        <item name="android:textAppearance">@style/chipTextUnselected</item>
+        <item name="chipStrokeColor">@color/pink_main</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+    <style name="chipSelected_option">
+        <item name="chipBackgroundColor">@color/pink_main</item>
+        <item name="chipCornerRadius">24dp</item>
+        <item name="chipStartPadding">12dp</item>
+        <item name="chipEndPadding">12dp</item>
+        <item name="textStartPadding">0dp</item>
+        <item name="textEndPadding">0dp</item>
+        <item name="iconStartPadding">0dp</item>
+        <item name="iconEndPadding">2dp</item>
+        <item name="chipIconSize">36dp</item>
+        <item name="chipMinHeight">44dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">@style/chipTextSelected</item>
+        <item name="chipStrokeColor">@color/pink_main</item>
+        <item name="chipStrokeWidth">1dp</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="android:colorBackground">@color/blue_light</item>
+        <item name="colorButtonNormal">@color/blue_light</item>
+        <item name="colorControlHighlight">@color/blue_light</item>
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+        <item name="colorBackgroundFloating">@color/blue_light</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+        <item name="android:colorBackground">@color/blue_light</item>
+        <item name="backgroundTint">@color/blue_light</item>
+    </style>
+
+    <style name="LayoutTitle">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">40dp</item>
+        <item name="cornerSizeTopLeft">40dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="roundedCornersImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Card -->
+    <style name="PinkCard">
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="android:clickable">true</item>
+        <item name="cardCornerRadius">16dp</item>
+        <item name="cardElevation">3dp</item>
+        <item name="cardBackgroundColor">@color/pink_main</item>
+    </style>
+
+    <!--Estilos de AlertDialog-->
+    <style name="AlertDialogTheme.Center" parent="ThemeOverlay.Material3.MaterialAlertDialog.Centered">
+        <item name="colorSurface">@color/blue_light</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.App</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.App.Title.Text</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.App.Title.Body</item>
+        <item name="buttonBarStyle">@style/ButtonBarStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.App.Button</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.App.Button</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App" parent="MaterialAlertDialog.Material3">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.MediumComponent</item>
+        <item name="shapeAppearanceOverlay">@null</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App.Title.Text" parent="MaterialAlertDialog.Material3.Title.Text.CenterStacked">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+    </style>
+
+    <style name="MaterialAlertDialog.App.Title.Body" parent="MaterialAlertDialog.Material3.Body.Text.CenterStacked">
+        <item name="android:textColor">@color/unfocused</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontFamily">@font/montserrat_regular</item>
+    </style>
+
+    <style name="ShapeAppearance.App.MediumComponent" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <style name="Widget.App.Button" parent="Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:fontFamily">@font/montserrat_semibold</item>
+        <item name="android:textColor">@color/pink_main</item>
+    </style>
+
+    <style name="ButtonBarStyle">
+        <item name="android:background">@color/blue_light</item>
+    </style>
+
+</resources>
