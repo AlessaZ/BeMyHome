@@ -117,7 +117,7 @@ public class RegisterActivity extends AppCompatActivity {
             isInvalid = true;
         }
 
-        if(telefono.length()==7 || telefono.length()==9){
+        if(telefono.length()!=9){
             etTelefono.setError("No es un teléfono válido");
             etTelefono.requestFocus();
             isInvalid = true;
