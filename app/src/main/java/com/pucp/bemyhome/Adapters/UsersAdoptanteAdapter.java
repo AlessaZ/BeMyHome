@@ -33,6 +33,7 @@ public class UsersAdoptanteAdapter extends FirestorePagingAdapter<User, UsersAdo
         holder.tvDni.setText(model.getDNI());
         holder.tvNombre.setText(model.getNombre());
         holder.tvTel.setText(model.getTelefono());
+        holder.tvCorreo.setText(model.getCorreo());
         Glide.with(holder.itemView.getContext()).load(model.getAvatarUrl())
                 .placeholder(holder.itemView.getContext().getDrawable(R.drawable.avatar_placeholder)).dontAnimate()
                 .into(holder.ivProfilePic);

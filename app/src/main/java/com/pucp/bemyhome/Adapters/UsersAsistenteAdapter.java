@@ -35,6 +35,7 @@ public class UsersAsistenteAdapter extends FirestorePagingAdapter<User, UsersAsi
     protected void onBindViewHolder(@NonNull UserAsistenteViewHolder holder, int position, @NonNull User model) {
         holder.tvDni.setText(model.getDNI());
         holder.tvNombre.setText(model.getNombre());
+        holder.tvcorreo.setText(model.getCorreo());
         holder.userAsist = model;
         Glide.with(holder.itemView.getContext()).load(model.getAvatarUrl())
                 .placeholder(holder.itemView.getContext().getDrawable(R.drawable.avatar_placeholder)).dontAnimate()
