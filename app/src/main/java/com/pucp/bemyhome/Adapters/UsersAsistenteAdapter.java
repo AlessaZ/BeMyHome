@@ -46,6 +46,7 @@ public class UsersAsistenteAdapter extends FirestorePagingAdapter<User, UsersAsi
         TextView tvDni;
         TextView tvNombre;
         User userAsist;
+        TextView tvcorreo;
         Button btnAct;
 
         public UserAsistenteViewHolder(@NonNull View itemView) {
@@ -54,6 +55,7 @@ public class UsersAsistenteAdapter extends FirestorePagingAdapter<User, UsersAsi
             tvDni = itemView.findViewById(R.id.tvAdminUserAsistDni);
             tvNombre = itemView.findViewById(R.id.tvAdminUserAsistNombre);
             btnAct = itemView.findViewById(R.id.btnAdminUserAsistActualizar);
+            tvcorreo = itemView.findViewById(R.id.tvAdminUserAsistCorreo);
             itemView.setOnClickListener(view -> {
                 Intent intent = new Intent(itemView.getContext(), AdminUpdateAsistenteActivity.class);
                 intent.putExtra("userAsist", userAsist);

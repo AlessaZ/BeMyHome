@@ -43,6 +43,7 @@ public class UsersAdoptanteAdapter extends FirestorePagingAdapter<User, UsersAdo
         TextView tvDni;
         TextView tvNombre;
         TextView tvTel;
+        TextView tvCorreo;
 
         public UserAdoptViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -50,6 +51,7 @@ public class UsersAdoptanteAdapter extends FirestorePagingAdapter<User, UsersAdo
             tvDni = itemView.findViewById(R.id.tvAdminUserAsistDni);
             tvNombre = itemView.findViewById(R.id.tvAdminUserAdptNombre);
             tvTel = itemView.findViewById(R.id.tvAdminUserAdptTelefono);
+            tvCorreo = itemView.findViewById(R.id.tvAdminUserAdptCorreo);
         }
 
     }
