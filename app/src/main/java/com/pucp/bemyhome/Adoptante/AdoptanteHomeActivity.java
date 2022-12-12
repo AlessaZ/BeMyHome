@@ -21,8 +21,15 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.imageview.ShapeableImageView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.AggregateQuerySnapshot;
+import com.google.firebase.firestore.AggregateSource;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.gson.Gson;
 import com.pucp.bemyhome.Adapters.ImageSelectorKindPetAdapter;
 import com.pucp.bemyhome.Details.ImageSelectorKindPetMargin;
@@ -45,6 +52,8 @@ public class AdoptanteHomeActivity extends AppCompatActivity {
     TextView tvNombre;
     ImageView ivPfp;
     EditText etSearch;
+    TextView tvSolicitudes;
+    ShapeableImageView ivFotitoAdopt;
 
     private Handler handler = new Handler(Looper.getMainLooper());
     private final long DELAY = 900;
@@ -73,6 +82,8 @@ public class AdoptanteHomeActivity extends AppCompatActivity {
         tvNombre = findViewById(R.id.tvAdopHomeNombre);
         etSearch = findViewById(R.id.etAdopHomeSearch);
         ivPfp = findViewById(R.id.ivAdopHomePfp);
+        tvSolicitudes = findViewById(R.id.tvAdoptHomeCantSolis);
+        ivFotitoAdopt = findViewById(R.id.ivAdoptHomeFotitoAdop);
 
         etSearch.addTextChangedListener(new TextWatcher() {
             @Override
@@ -94,6 +105,15 @@ public class AdoptanteHomeActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("Settings", Context.MODE_PRIVATE);
         Gson gson = new Gson();
         User user = gson.fromJson(sharedPreferences.getString("user",""), User.class);
+
+        FirebaseUser userG = FirebaseAuth.getInstance().getCurrentUser();
+        Glide.with(this).load(user.getAvatarUrl()).placeholder(R.drawable.avatar_placeholder).into(ivFotitoAdopt);
+        FirebaseFirestore.getInstance().collection("solicitudes").whereEqualTo("adoptanteUser.uid", userG.getUid()).count().get(AggregateSource.SERVER).addOnSuccessListener(new OnSuccessListener<AggregateQuerySnapshot>() {
+            @Override
+            public void onSuccess(AggregateQuerySnapshot aggregateQuerySnapshot) {
+                tvSolicitudes.setText(aggregateQuerySnapshot.getCount() + "");
+            }
+        });
 
         tvNombre.setText(user.getNombre());
         Glide.with(this).load(user.getAvatarUrl()).placeholder(R.drawable.avatar_placeholder).into(ivPfp);

@@ -119,10 +119,81 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="24dp"
             android:layout_marginTop="24dp"
-            android:text="Gatos"
+            android:text="¿Cuántas solicitudes has realizado?"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rvAdopHomeCategories" />
+
+        <RelativeLayout
+            android:id="@+id/rlAsistenteHomeEmpleadosMes"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/rectangle_gradient_home"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAdopHomeCategoria">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitStart"
+                android:src="@drawable/rectangle_gradient_home" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="15dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvAsistenteHomeNombreEmp"
+                        style="@style/PinkSemiBoldSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="20dp"
+                        android:text="Solicitudes"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        style="@style/PinkSemiBoldSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="realizadas"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/tvAdoptHomeCantSolis"
+                        style="@style/WhiteSemiBoldSubtitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="0"
+                        android:textSize="70dp" />
+
+                </LinearLayout>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivAdoptHomeFotitoAdop"
+                    android:scaleType="fitCenter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:src="@drawable/avatar_placeholder">
+                </com.google.android.material.imageview.ShapeableImageView>
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </RelativeLayout>
